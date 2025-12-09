@@ -1,0 +1,1 @@
+# Relacoes_propriedades_fecho
