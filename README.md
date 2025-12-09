@@ -289,18 +289,3 @@ cat saida-ref.dot
   - `salvarSaidaDOT()` - Req. 09
   - `main()` - Orquestra execução
 
-## Notas Importantes
-
-- Os elementos do conjunto A começam em 1 (conforme especificação)
-- A matriz usa índices 0-based internamente (conversão automática)
-- Arestas adicionadas pelos fechos aparecem em vermelho nos arquivos DOT
-- Toda memória alocada é liberada ao final da execução
-- O programa trata erros de arquivo e validação de entrada
-
-## Características
-
-✅ **Código comentado** - Fácil de entender e modificar  
-✅ **Sem dependências** - Apenas stdlib, stdio, string  
-✅ **Dinâmico** - Funciona com qualquer tamanho de conjunto  
-✅ **Robusto** - Validação e tratamento de erros  
-✅ **Documentado** - README explica cada algoritmo  
