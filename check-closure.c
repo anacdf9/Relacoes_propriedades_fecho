@@ -321,11 +321,11 @@ int main(int argc, char *argv[]) {
     // --- verificacao e calculo reflexiva ---
     printf("\n  propriedade reflexiva \n");
     int e_reflexiva = verificar_reflexiva(rel);
-    printf("a relacao e reflexiva? %s\n", e_reflexiva ? "sim" : "nao");
+    printf("a relação é reflexiva? %s\n", e_reflexiva ? "sim" : "não");
 
     // se nao for reflexiva, calcula e salva o fecho (req. 06)
     if (!e_reflexiva) {
-        printf(" a relacao nao e reflexiva. calculando fecho...\n");
+        printf(" a relação não é reflexiva. calculando fecho...\n");
         relacao *fecho_reflexivo = calcular_fecho_reflexivo(rel);
         
         // monta o nome do arquivo de saida com sufixo correto
@@ -333,21 +333,21 @@ int main(int argc, char *argv[]) {
         snprintf(nome_arq_reflexivo, sizeof(nome_arq_reflexivo), "%s-ref.dot", preambulo);
         
         salvar_saida_dot(rel, fecho_reflexivo, nome_arq_reflexivo);
-        printf("saida salva em: %s\n", nome_arq_reflexivo);
+        printf("saída salva em: %s\n", nome_arq_reflexivo);
         
         liberar_relacao(fecho_reflexivo);
     } else {
-        printf(" a relacao ja e reflexiva. nenhum arquivo gerado.\n");
+        printf(" a relação já é reflexiva. nenhum arquivo gerado.\n");
     }
     
     // --- verificacao e calculo simetrica ---
-    printf("\n  propriedade simetrica \n");
+    printf("\n  propriedade simétrica \n");
     int e_simetrica = verificar_simetrica(rel);
-    printf("a relacao e simetrica? %s\n", e_simetrica ? "sim" : "nao");
+    printf("a relação é simétrica? %s\n", e_simetrica ? "sim" : "não");
 
     // se nao for simetrica, calcula e salva o fecho (req. 07)
     if (!e_simetrica) {
-        printf(" a relacao nao e simetrica. calculando fecho...\n");
+        printf(" a relação não é simétrica. calculando fecho...\n");
         relacao *fecho_simetrico = calcular_fecho_simetrico(rel);
         
         // monta o nome do arquivo de saida com sufixo correto
@@ -355,21 +355,21 @@ int main(int argc, char *argv[]) {
         snprintf(nome_arq_simetrico, sizeof(nome_arq_simetrico), "%s-sim.dot", preambulo);
         
         salvar_saida_dot(rel, fecho_simetrico, nome_arq_simetrico);
-        printf("saida salva em: %s\n", nome_arq_simetrico);
+        printf("saída salva em: %s\n", nome_arq_simetrico);
         
         liberar_relacao(fecho_simetrico);
     } else {
-        printf(" a relacao ja e simetrica. nenhum arquivo gerado.\n");
+        printf(" a relação já é simétrica. nenhum arquivo gerado.\n");
     }
     
     // --- verificacao e calculo transitiva ---
     printf("\n  propriedade transitiva \n");
     int e_transitiva = verificar_transitiva(rel);
-    printf("a relacao e transitiva? %s\n", e_transitiva ? "sim" : "nao");
+    printf("a relação é transitiva? %s\n", e_transitiva ? "sim" : "não");
 
     // se nao for transitiva, calcula e salva o fecho (req. 08)
     if (!e_transitiva) {
-        printf(" a relacao nao e transitiva. calculando fecho...\n");
+        printf(" a relação não é transitiva. calculando fecho...\n");
         relacao *fecho_transitivo = calcular_fecho_transitivo(rel);
         
         // monta o nome do arquivo de saida com sufixo correto
@@ -377,7 +377,7 @@ int main(int argc, char *argv[]) {
         snprintf(nome_arq_transitivo, sizeof(nome_arq_transitivo), "%s-tra.dot", preambulo);
         
         salvar_saida_dot(rel, fecho_transitivo, nome_arq_transitivo);
-        printf("saida salva em: %s\n", nome_arq_transitivo);
+        printf("saída salva em: %s\n", nome_arq_transitivo);
         
         liberar_relacao(fecho_transitivo);
     } else {
